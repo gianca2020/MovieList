@@ -1,10 +1,10 @@
 import './App.css'
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Card, Container, Nav, Navbar, Row, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import { Card } from 'react-bootstrap';
-import { Col } from 'react-bootstrap';
-import Row from 'react-bootstrap/Row';
-
+// import 'bootstrap/dist/css/bootstrap.min.css';
+// import { Card } from 'react-bootstrap';
+// import { Col } from 'react-bootstrap';
+// import Row from 'react-bootstrap/Row';
 
 function App() {
 
@@ -23,19 +23,22 @@ function App() {
         </Container>
       </Navbar>
 
+    <Container>
       <Row>
         <Col>
           <Card>
-            <Card.Img variant='top' src="https://placehold.co/80x80" alt="Placeholder image"/>
+            <Card.Img variant='top' src="https://via.placeholder.com/80x80" alt="Placeholder image" className="img-fluid"/>
             <Card.Body>
               <Card.Title>This is my first project in react</Card.Title>
               <Card.Text>
                 <h4>THis is more information</h4>
+                <h4>i dont care at this point</h4>
               </Card.Text>
             </Card.Body>
           </Card>
         </Col>
       </Row>
+      </Container>
     </>
   );
 }

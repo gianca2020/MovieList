@@ -1,46 +1,45 @@
-import './App.css'
-import { Card, Container, Nav, Navbar, Row, Col } from 'react-bootstrap'
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "./App.css";
+import { Card, Container, Nav, Navbar, Row, Col } from "react-bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
 // import 'bootstrap/dist/css/bootstrap.min.css';
 // import { Card } from 'react-bootstrap';
 // import { Col } from 'react-bootstrap';
 // import Row from 'react-bootstrap/Row';
+import CustomNavbar from "./components/customNavbar";
+import MovieCard from "./components/MovieCard";
+
 
 function App() {
 
+  const movies = [
+    {name: "Perfect Blue", director: "Satoshi Kon", year: 1997},
+    {name: "lalaLand", director: "Damien Schazelle", year: 2015},
+    {name: "The Muppets", director: "James Bobin", year: 2011}
+  ]
+
   return (
     <>
-      <Navbar expand="lg" className="bg-body-tertiary">
-        <Container>
-          <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
-          <Navbar.Toggle aria-controls="basic-navbar-nav" />
-          <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
-              <Nav.Link href="#home">Home</Nav.Link>
-              <Nav.Link href="#link">Link</Nav.Link>
-            </Nav>
-          </Navbar.Collapse>
-        </Container>
-      </Navbar>
+<CustomNavbar/>
 
-    <Container>
-      <Row>
-        <Col>
-          <Card>
-            <Card.Img variant='top' src="https://via.placeholder.com/80x80" alt="Placeholder image" className="img-fluid"/>
-            <Card.Body>
-              <Card.Title>This is my first project in react</Card.Title>
-              <Card.Text>
-                <h4>THis is more information</h4>
-                <h4>i dont care at this point</h4>
-              </Card.Text>
-            </Card.Body>
-          </Card>
-        </Col>
-      </Row>
+      <Container fluid>
+        <Row>
+          <Col>
+            <MovieCard name={movies[0].name}
+              director={movies[0].director}
+              year={movies[0].year}/>
+          </Col>
+          <Col>
+          <MovieCard name={movies[1].name} director={movies[1].director} year={movies[1].year}/>
+          </Col>
+          <Col>
+            <Card>
+              <MovieCard name={movies[2].name} director={movies[2].director} year={movies[2].year}/>
+            </Card>
+          </Col>
+        </Row>
       </Container>
     </>
   );
 }
 
-export default App
+export default App;

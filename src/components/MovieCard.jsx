@@ -14,10 +14,10 @@ const MovieCard = (props) => {
                 alt= "haha, try again loser"
               />
               <Card.Body>
-                <Card.Title>{`Movie: ${props.imageUrl}`}</Card.Title> 
+                <Card.Title>{`Movie: ${props.name}`}</Card.Title> 
                 <Card.Text>
-                  <h4>{`Movie: ${props.director}`}</h4>
-                  <h5>{`Movie: ${props.year}`}  </h5>
+                  <h4>{`Director: ${props.director}`}</h4>
+                  <h5>{`Release date: ${props.year}`}  </h5>
                 </Card.Text>
               </Card.Body>
             </Card>

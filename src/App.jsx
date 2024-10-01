@@ -7,37 +7,65 @@ import "bootstrap/dist/css/bootstrap.min.css";
 // import Row from 'react-bootstrap/Row';
 import CustomNavbar from "./components/customNavbar";
 import MovieCard from "./components/MovieCard";
-import 'C:/Users/gianc/MovieList/src/App.css';
+import "C:/Users/gianc/MovieList/src/App.css";
 // import image1 from '.images/lalaLand.jpg';
 
-
 function App() {
-
   const movies = [
-    {imageUrl: 'https://m.media-amazon.com/images/M/MV5BYjkyZjY1OWItNjYyNC00ZjlhLTgwOTAtMGNiYTFmYTNmZDI3XkEyXkFqcGc@._V1_.jpg', name: "Perfect Blue", director: "Satoshi Kon", year: 1997},
-    {imageUrl: `https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_.jpg`,name: "lalaLand", director: "Damien Schazelle", year: 2015},
-    {iamgeUrl: `https://m.media-amazon.com/images/M/MV5BMjE0MTM4NTc3NF5BMl5BanBnXkFtZTcwMjYzOTIxNg@@._V1_FMjpg_UX1000_.jpg`, name: "The Muppets", director: "James Bobin", year: 2011}
-  ]
+    {
+      imageUrl:
+        "https://m.media-amazon.com/images/M/MV5BYjkyZjY1OWItNjYyNC00ZjlhLTgwOTAtMGNiYTFmYTNmZDI3XkEyXkFqcGc@._V1_.jpg",
+      name: "Perfect Blue",
+      director: "Satoshi Kon",
+      year: 1997,
+    },
+    {
+      imageUrl: `https://m.media-amazon.com/images/M/MV5BMzUzNDM2NzM2MV5BMl5BanBnXkFtZTgwNTM3NTg4OTE@._V1_.jpg`,
+      name: "lalaLand",
+      director: "Damien Schazelle",
+      year: 2015,
+    },
+    {
+      imageUrl: `https://m.media-amazon.com/images/M/MV5BMjE0MTM4NTc3NF5BMl5BanBnXkFtZTcwMjYzOTIxNg@@._V1_FMjpg_UX1000_.jpg`,
+      name: "The Muppets",
+      director: "James Bobin",
+      year: 2011,
+    },
+  ];
 
   return (
     <>
-<CustomNavbar/>
+      <CustomNavbar />
 
-      <Container fluid>
-        <Row>
+      <Container fluid classname="card-container">
+        <Row xs={1} md={2} className="g-4">
           <Col>
-            <MovieCard 
+            <MovieCard
+              className="cardWrapper"
               imageUrl={movies[0].imageUrl}
               name={movies[0].name}
               director={movies[0].director}
-              year={movies[0].year}/>
+              year={movies[0].year}
+            />
           </Col>
           <Col>
-          <MovieCard imageUrl={movies[1].imageUrl} name={movies[1].name} director={movies[1].director} year={movies[1].year}/>
+            <MovieCard
+              className="cardWrapper"
+              imageUrl={movies[1].imageUrl}
+              name={movies[1].name}
+              director={movies[1].director}
+              year={movies[1].year}
+            />
           </Col>
           <Col>
             <Card>
-              <MovieCard imageUrl={movies[2].imageUrl} name={movies[2].name} director={movies[2].director} year={movies[2].year}/>
+              <MovieCard
+                className="cardWrapper"
+                imageUrl={movies[2].imageUrl}
+                name={movies[2].name}
+                director={movies[2].director}
+                year={movies[2].year}
+              />
             </Card>
           </Col>
         </Row>

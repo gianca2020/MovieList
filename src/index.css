@@ -6,3 +6,17 @@ body{
     box-sizing: border-box;
 }
 
+
+
+.cardWrapper {
+    transform: scale(0.8); /* Shrinks the entire card */
+    background-color: #f8f9fa; /* Changes the background color of the card */
+    padding: 10px; /* Adjusts padding for the whole card */
+  }
+  
+
+
+
+.bg-body-tertiary sticky-top{
+    background-color: red;
+}

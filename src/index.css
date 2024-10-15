@@ -19,4 +19,16 @@ body{
 
 .bg-body-tertiary sticky-top{
     background-color: red;
+    border: 1px solid black;
+}
+
+.Search_Button{
+    color: black;
+    border: 1px solid black;
+
+    
+}
+
+.Search_Button:hover{
+    background-color: rgb(153, 40, 40);
 }
